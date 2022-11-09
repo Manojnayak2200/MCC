@@ -1,0 +1,191 @@
+﻿
+@{
+    ViewData["Title"] = "StudentList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .table-responsive {
+        display: normal;
+    }
+</style>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+
+
+<div class="text-center">
+    <hr />
+    <h1 class="text-danger">All Students List</h1>
+    <hr />
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div>
+                <label class="font-weight-bold">Select Class</label>
+                <select id="ddclsss" class="form-control">
+                    <option value="0">Select Class</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+
+                </select>
+            </div>
+            <br />
+            <div>
+
+                <button type="button" class="btn btn-danger">Search</button>
+            </div>
+        </div>
+
+
+        <div class="col-6">
+            <div>
+                
+            </div>
+           
+        </div>
+    </div>
+    <br />
+    <div>
+        <table class="table table-striped stripe row-border order-column" cellspacing="3" width="100%" id="table_id">
+            <thead class="bg-info">
+                <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Date Of Joining</th>
+
+                    <th>Pending Fee</th>
+                    <th>Pay</th>
+
+                </tr>
+
+            </thead>
+            <tbody id="tbltd">
+                <tr>
+                    <td>MANOJ</td>
+                    <td>1</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Raj</td>
+                    <td>3</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Sania</td>
+                    <td>5</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Sana</td>
+                    <td>6</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Papali</td>
+                    <td>7</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Suji</td>
+                    <td>10</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Danial</td>
+                    <td>10</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Sesa</td>
+                    <td>10</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Deba</td>
+                    <td>10</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Kiran</td>
+                    <td>10</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Sanjay</td>
+                    <td>10</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Rama</td>
+                    <td>1</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>Ankita</td>
+                    <td>10</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+                <tr>
+                    <td>MANOJ</td>
+                    <td>8</td>
+                    <td>20/10/2022</td>
+                    <td>1000</td>
+                    <td><button type="button" onclick="PayAmount('1000')" class="btn btn-success ">Pay</button></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#table_id').dataTable({
+            //"pagingType": "full_numbers",
+            //"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            //"scrollY": "400px"
+        });
+    });
+    function PayAmount(obj) {
+        alert(obj);
+    }
+
+</script>
+
+
+

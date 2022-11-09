@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "BookingAdvance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center">
+    <h1 class="text-success"> Student Advance  Booking  Form</h1>
+</div>
+
+
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/
+    4.0.0/js/bootstrap.min.js">
+</script>
+<h1></h1>
+<div class="container">
+    <div style="border:groove">
+
+        <div class="p-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div>
+                            <label>Select Class<span class="star">*</span></label>
+                            <select id="Classtype" class="form-control form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <option>Select Class</option>
+                                <option>I</option>
+                                <option>II</option>
+                                <option>III</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label>Name<b class="text-danger">*</b></label>
+                            <input type="text" id="FullName" maxlength="8" class="form-control" placeholder="Kiran" />
+                            <div id="Fname" class="invalid-feedback"></div>
+                        </div>
+                        <div>
+                            <label>Email <b class="text-danger">*</b></label>
+                            <input type="email" id="Email" class="form-control" placeholder="kiranpanda890@gmail.com" />
+                        </div>
+                        <div>
+                            <label>Gender  <b class="text-danger">*</b></label>
+                            <input type="radio" id="Male" value="Male" name="Gender" class="Gender" checked="true" />Male
+                            <input type="radio" value="Female" name="Gender" class="Gender" id="Female" />Female
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <div>
+                            <label>Age<b class="text-danger">*</b></label>
+                            <input type="text" id="age" class="form-control" placeholder="10" />
+                            <div id="ageer" class="invalid-feedback"></div>
+                        </div>
+
+                        <div>
+                            <label>Mobile No <b class="text-danger">*</b></label>
+                            <input type="text" id="mobile" class="form-control" placeholder="7609938090" />
+                        </div>
+                        <div>
+                            <label>FathersName<b class="text-danger">*</b></label>
+                            <input type="text" id="Father" maxlength="8" class="form-control" placeholder="Laxmidhar Panda" />
+                            <div id="ftr" class="invalid-feedback"></div>
+                        </div>
+
+                    </div>
+                    <div class="col-4">
+                        <div>
+                            <label>Address<b class="text-danger">*</b></label>
+                            <textarea id="add" name="textarea" rows="4" cols="50" class="form-control" placeholder="Bhubaneswar"></textarea>
+
+                            <div id="add9" class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" button id="btnSave" class="btn btn-success">Save</button> <button type="button" class="btn btn-danger" onclick="return resetTimer()">Reset</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
