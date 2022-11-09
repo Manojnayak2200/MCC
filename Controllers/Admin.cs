@@ -10,13 +10,6 @@ namespace MCC.Controllers
     public class Admin : Controller
     {
 
-
-
-
-
-
-
-
         public IActionResult login()
         {
             return View();
